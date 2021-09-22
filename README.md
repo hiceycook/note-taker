@@ -16,11 +16,6 @@
 This is a node.js command line application to generate a team profile to a simply-styled html file.
 <div id='Installation'/>
 
-## Media
-Walkthrough
-
-INSERT WALKTHROUGH VIDEO HERE
-
 ## Installation
 To open this generator, you will need to clone the repo and make sure you have access to node.js, and install the required npm packages.
 
