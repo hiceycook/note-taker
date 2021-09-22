@@ -1,5 +1,9 @@
 {
     "notes": [
-        {}
+        {
+            "title": "Example Title",
+            "text": "Example Text",
+            "id": "0"
+        }
     ]
 }
