@@ -26,7 +26,7 @@ To open this generator, you will need to clone the repo and make sure you have a
 
 <div id='Usage'/>
 ## Usage
-To use this generator, you can go it its deployment at 
+To use this generator, you can go it its deployment at https://calm-depths-93540.herokuapp.com/
 
 <div id='License'/>
 ## License
