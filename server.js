@@ -7,11 +7,11 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+
 //Add front end files to server
 app.use(express.static('public'));
 
@@ -28,7 +28,6 @@ app.use(express.static('public'));
 app.get('/api/notes', (req, res) => {
     res.json(notes);
 });
-
 
 //DISPLAY INDEX.HTML TO SERVER ROOT
 app.get('/', (req, res) => {
@@ -81,6 +80,8 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
+
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
+
