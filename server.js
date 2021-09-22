@@ -3,7 +3,6 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
-
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -14,14 +13,6 @@ app.use(express.json());
 
 //Add front end files to server
 app.use(express.static('public'));
-
-
-
-
-
-
-
-
 
 
 //GET NOTES JSON
@@ -65,7 +56,7 @@ function createNewNote(body, notesArray) {
     return note;
 }
 
-//POST TO NOTES JSON
+//POST New Note
 app.post('/api/notes', (req, res) => {
     // req.body is where our incoming content will be
 
@@ -79,6 +70,15 @@ app.post('/api/notes', (req, res) => {
         res.json(note);
     }
 });
+
+app.delete("/notes/:id", (req, res) => {
+    const notes = JSON.parse(fs.readFileSync("./db/db.json"));
+    const delNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
+    fs.writeFileSync("./db/db.json", JSON.stringify(delNote));
+    res.json(delNote);
+    // console.log(delNote);
+})
+
 
 
 
