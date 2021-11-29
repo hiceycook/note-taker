@@ -20,6 +20,7 @@ This is a node.js command line application to generate a team profile to a simpl
 To open this generator, you will need to clone the repo and make sure you have access to node.js, and install the required npm packages.
 
 <div id='Usage'/>
+
 ## Usage
 To use this generator, you can go it its deployment at https://calm-depths-93540.herokuapp.com/
 
